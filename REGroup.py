@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+# Report bug to tiwarilokender@gmail.com
 
 import torch
 import torch.nn.functional as F
@@ -108,11 +109,9 @@ class REGroup(torch.nn.Module):
             with torch.no_grad():
                 m_out = self.model(img)
             h.remove()
-  #      print(lay_out.keys())
 
 
         for l_key  in lay_out.keys():
-  #          print(l_key.split('_'))
             if l_key.split('_')[-1] == 'conv':
                 lid_num = l_key.split('_')[1]
                 tmp_layer = lay_out[l_key].view(lay_out[l_key].shape[0],-1).to(self.device)
@@ -162,104 +161,9 @@ class REGroup(torch.nn.Module):
                 kl_corr_pos = np.sum(np.log(self.gen_classifiers_pos[lid_num]/sam_pos_norm_np)*self.gen_classifiers_pos[lid_num],axis=1)
                 kl_corr_neg = np.sum(np.log(self.gen_classifiers_neg[lid_num]/sam_neg_norm_np)*self.gen_classifiers_neg[lid_num],axis=1)
 
-                # KLpos[lid_num] = np.exp(-kl_corr_pos)
-                # KLneg[lid_num] = np.exp(-kl_corr_neg)
-
                 kl_corr_pos = np.exp(-kl_corr_pos)
                 kl_corr_neg = np.exp(-kl_corr_neg)
 
                 self.prob_scores_pos[int(lid_num)-1] = kl_corr_pos/np.sum(kl_corr_pos)
                 self.prob_scores_neg[int(lid_num)-1] = kl_corr_neg/np.sum(kl_corr_neg)
 
-        # return KLpos, KLneg
-
-
-
-
-# split = 'test'
-# save_path='/media/lokender/MyPassport/rebuttal_cifar10/intermediate_outputs/layer_outputs/'
-
-
-# device = 'cuda'
-# PATH = './model_best.pth.tar'
-# model = vgg.__dict__['vgg19']()
-# model.features = torch.nn.DataParallel(model.features)
-
-# checkpoint = torch.load(PATH)
-# best_prec1 = checkpoint['best_prec1']
-# model.load_state_dict(checkpoint['state_dict'])
-# model.to(device)
-
-
-
-# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-#                                  std=[0.229, 0.224, 0.225])
-# transform=transforms.Compose([
-#             transforms.ToTensor(),
-#             normalize,
-#         ])
-
-
-# # switch to evaluate mode
-# model.eval()
-# vgg_version='vgg19'
-# for cid in range(10):
-#     samples = glob.glob('/media/lokender/MyPassport/rebuttal_cifar10/split_cifar10_data/'+split+'/'+str(cid)+'/*.mat')
-#     acc =0
-#     for i in range(len(samples)):
-#     #for i in range(1):
-# #        print(i)
-#     #    print(samples[i])
-#         print('cid:{},sid:{}'.format(cid, i))
-#         data = sio.loadmat(samples[i])
-#         input = Image.fromarray(data['img'])
-#         input = transform(input).unsqueeze(0).to(device)
-
-#         label = torch.tensor(data['label'])[0][0].to(device)
-
-#         # compute output
-#         with torch.no_grad():
-#             output = model(input)
-#             out = torch.softmax(output,dim=1)
-#             soft_ordered,soft_ordered_idx = torch.sort(out.data,  dim=1,descending=True)
-
-
-#         top_soft =soft_ordered[0,:]         # TOP-20 CLASSES
-#         top_class=soft_ordered_idx[0,:]
-
-#         pred_class_id = top_class[0]
-
-#         if pred_class_id == label:
-#             acc = acc+1  
-
-#           #  print('success')
-#             rdl = robdl(eval_model=model,device=device)
-#             hook_outputs=rdl.hook_Layer_VGG(vgg_ver=vgg_version,img=input)
-#             save_name = save_path+split+'/'+str(label.cpu().numpy())+'/'+samples[i].split('/')[-1].split('.')[0].split('/')[-1]+'_prefs'
-#           #  print(save_name)
-#             prefs = {}
-#             lnames =[]
-#             for l_key  in hook_outputs.keys():
-#                 lnames.append(l_key)
-#                 if l_key.split('_')[-1] == 'conv':
-#                     tmp_layer = hook_outputs[l_key].view(hook_outputs[l_key].shape[0],-1).to(device)
-#                     pos_ind = tmp_layer>0
-#                     neg_ind = tmp_layer<0
-
-#                     prefs[l_key+'_p_count'] = torch.sum(pos_ind,dim=1).cpu().detach().numpy()
-#                     prefs[l_key+'_n_count'] = torch.sum(neg_ind,dim=1).cpu().detach().numpy()
-#                     prefs[l_key+'_p_sum'] = torch.sum(torch.mul(pos_ind.to(device).float(),tmp_layer),dim=1).cpu().detach().numpy()
-#                     prefs[l_key+'_n_sum'] = torch.sum(torch.mul(neg_ind.to(device).float(),tmp_layer),dim=1).cpu().detach().numpy()
-#                     prefs[l_key+'_p_count_minK'] = torch.sum(torch.sum(pos_ind,dim=1)>0).cpu().detach().numpy()
-#                     prefs[l_key+'_n_count_minK'] = torch.sum(torch.sum(neg_ind,dim=1)>0).cpu().detach().numpy()
-#                 else:
-#                     prefs[l_key] = hook_outputs[l_key].cpu().detach().numpy()
-
-#                 prefs['top_soft']  = top_soft.cpu().detach().numpy()
-#                 prefs['top_class'] = top_class.cpu().detach().numpy()
-#                 prefs['wnid'] = label
-#                 prefs['layers'] = lnames
-
-#             sio.savemat(save_name+'.mat',prefs)
-
-#     # print('acc:{},cid:{},label:{}'.format(acc,cid, label))
