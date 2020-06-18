@@ -1,5 +1,7 @@
-# Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions
-This repository contains the demo code of the method called **REGroup** proposed in the paper: **Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions**. The **REGroup**, stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. 
+   
+![alt text](https://github.com/lokender/REGroup/blob/master/REGroup_teaser.png "REGroup Teaser")
+
+This repository contains the demo code of the method called **REGroup** proposed in the paper: *Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions*. The **REGroup**, stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. 
 
 If you use this repository or REGroup in your research/product, please please consider citing:.
 
@@ -9,9 +11,6 @@ If you use this repository or REGroup in your research/product, please please co
 	Booktitle  = {The European Conference on Computer Vision (ECCV)},
 	Year = {2018}
     }
-    
-![alt text](https://github.com/lokender/REGroup/blob/master/REGroup_teaser.png "REGroup Teaser")
-
 # Requirements
   - Pytorch 
   - numpy, scipy 
