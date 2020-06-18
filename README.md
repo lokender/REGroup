@@ -1,5 +1,5 @@
 # Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions
-This repository contains the demo code of the paper: **Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions**. The proposed method called **REGroup**, which stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. REGroup is a **simple**, **scalable** (from CIFAR10 to ImageNet),  and **practical**  defense strategy that is model agnostic and does not require any re-training or fine-tuning. We suggest to use REGroup at test time to make a pre-trained network robust to adversarial perturbations.
+This repository contains the demo code of the method called **REGroup** proposed in the paper: **Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions**. The **REGroup**, stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. 
 
 If you use this repository or REGroup in your research/product, please please consider citing:.
 
