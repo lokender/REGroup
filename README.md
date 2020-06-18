@@ -27,9 +27,9 @@ If you use this repository or REGroup, please please consider citing:.
 
 
 # Steps to run the demo
-- clone the repository.
-- Download CIFAR10 PGD L-infinity adversarial examples
-- Open jupyter notebook REGroup_demo_cifar10_vgg19.ipynb
+- Clone the repository.
+- [Download](https://drive.google.com/file/d/1ylJctBJzh4ih-0zzD4ZLO2umh--QpX7u/view?usp=sharing) CIFAR10 PGD L-infinity adversarial examples 
+- Open jupyter notebook **REGroup_demo_cifar10_vgg19.ipynb**
 
 ```sh
 $ git clone https://github.com/lokender/REGroup.git
