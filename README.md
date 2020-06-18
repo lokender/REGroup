@@ -8,6 +8,8 @@ If you use this repository or REGroup, please please consider citing:.
 	Booktitle  = {The European Conference on Computer Vision (ECCV)},
 	Year = {2018}
     }
+    
+![alt text](https://github.com/lokender/REGroup/blob/master/REGroup_teaser.png "REGroup Teaser")
 # Salient features of REGroup
   - Convert a **pre-trained classifier** into **robust classifier**.
   - REGroup is a test time replacement of Softmax. 
