@@ -28,13 +28,13 @@ If you use this repository or REGroup, please please consider citing:.
 
 # Steps to run the demo
 - clone the repository.
-- Download CIFAR10 data.
-- Open jupyter notebook
+- Download CIFAR10 PGD L-infinity adversarial examples
+- Open jupyter notebook REGroup_demo_cifar10_vgg19.ipynb
 
 ```sh
 $ git clone https://github.com/lokender/REGroup.git
-$ wget 
-$ jupyter notbeook
+$ cd REGroup
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ylJctBJzh4ih-0zzD4ZLO2umh--QpX7u' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1ylJctBJzh4ih-0zzD4ZLO2umh--QpX7u" -O cifar10_vgg19_pgd_examples.mat && rm -rf /tmp/cookies.txt
 ```
 
 # To-dos?
