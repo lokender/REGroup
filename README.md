@@ -4,9 +4,10 @@
 This repository contains the demo code of the method called **REGroup** proposed in the paper: *Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions*. The **REGroup**, stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. 
 
 If you use this repository or REGroup in your research/product, please please consider citing:.
+
 @inproceedings{plummerCITE2018,
-Author = {Bryan A. Plummer and Paige Kordas and M. Hadi Kiapour and Shuai Zheng and Robinson Piramuthu and Svetlana Lazebnik},
-Title = {Conditional Image-Text Embedding Networks},
+	Author = {Bryan A. Plummer and Paige Kordas and M. Hadi Kiapour and Shuai Zheng and Robinson Piramuthu and Svetlana 			Lazebnik},
+	Title = {Conditional Image-Text Embedding Networks},
 	Booktitle  = {The European Conference on Computer Vision (ECCV)},
 	Year = {2018}
     }
