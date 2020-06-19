@@ -5,7 +5,7 @@ This repository contains the demo code of the method called **REGroup** proposed
 
 If you use this repository or REGroup in your research/product, please please consider citing:.
    
-      @inproceedings{tiwari2020dissecting,
+      @article{tiwari2020dissecting,
         title={Dissecting Deep Networks into an Ensemble of Generative Classifiers for Robust Predictions},
         author={Tiwari, Lokender and Madan, Anish and Anand, Saket and Banerjee, Subhashis },
         journal={arXiv preprint arXiv:2006.10679},
