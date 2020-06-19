@@ -7,7 +7,7 @@ If you use this repository or REGroup in your research/product, please please co
    
       @inproceedings{tiwari2020dissecting,
         title={Dissecting Deep Networks into an Ensemble of Generative Classifiers for Robust Predictions},
-        author={Tiwari, Lokender and Madan, Anish and Anand, Saket and Subhashis Banerjee},
+        author={Tiwari, Lokender and Madan, Anish and Anand, Saket and Banerjee, Subhashis },
         journal={arXiv preprint arXiv:2006.10679},
         year={2020}
       }
