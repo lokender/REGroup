@@ -17,7 +17,7 @@ If you use this repository or REGroup in your research/product, please please co
   - numpy, scipy 
   - matplotlib 
   - Jupyter notebook 
-  - foolbox (version 2.4.0)
+  - foolbox (version 2.3.0)
   
 
 
