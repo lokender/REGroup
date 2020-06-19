@@ -41,6 +41,6 @@ $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=downlo
 
 Report any bug or suggestion to **tiwarilokender@gmail.com**.
 
-# Press STAR on the top right of this page for continuous updates.
+## Press STAR on the top right of this page for continuous updates.
 
 
