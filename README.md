@@ -1,16 +1,17 @@
    
 ![alt text](https://github.com/lokender/REGroup/blob/master/REGroup_teaser.png "REGroup Teaser")
 
-This repository contains the demo code of the method called **REGroup** proposed in the paper: *Dissecting Deep Networks into an Ensemble of GenerativeClassifiers for Robust Predictions*. The **REGroup**, stands for *Rank-aggregating Ensemble of Generative Classifiers for Robust Predictions*. 
+This repository contains the demo code of the method called **REGroup** proposed in the paper: *REGroup: Rank-aggregating Ensemble of Generative Classifiers
+for Robust Predictions*. 
 
-If you use this repository or REGroup in your research/product, please please consider citing:.
+<!-- If you use this repository or REGroup in your research/product, please please consider citing:.
    
       @article{tiwari2020dissecting,
         title={Dissecting Deep Networks into an Ensemble of Generative Classifiers for Robust Predictions},
         author={Tiwari, Lokender and Madan, Anish and Anand, Saket and Banerjee, Subhashis },
         journal={arXiv preprint arXiv:2006.10679},
         year={2020}
-      }
+      } -->
 
 # Requirements
   - Pytorch 
