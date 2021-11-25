@@ -2,7 +2,7 @@
 ![alt text](https://github.com/lokender/REGroup/blob/master/REGroup_teaser.png "REGroup Teaser")
 
 This repository contains the demo code of the method called **REGroup** proposed in the paper: *REGroup: Rank-aggregating Ensemble of Generative Classifiers
-for Robust Predictions*. 
+for Robust Predictions, IEEE/CVF WACV, 2022*. 
 
 <!-- If you use this repository or REGroup in your research/product, please please consider citing:.
    
